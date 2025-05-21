@@ -1,9 +1,9 @@
-//init default fonts
+//------init default fonts
 * {
     font-family: "Montserrat", sans-serif;
 }
 
-//init global vars
+//-----init global vars
 //colors
 $darkest: #000000;
 $brightest: #ffffff;
@@ -11,8 +11,14 @@ $contrast1: #FF6060;
 $contrast2: #C4C4C4;
 $support1: #E3E3E3;
 $light-background: #F6F6F6;
+//spacings
+$xxtra-large: 140px;
+$xtra-large: 100px;
+$large: 50px;
+$small: 20px;
+$xtra-small: 10px;
 
-//reset
+//------reset
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
