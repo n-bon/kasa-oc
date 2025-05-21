@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
 import housings from '../../assets/data/housings.json'
 
 function Housing() {
@@ -7,10 +7,7 @@ function Housing() {
 
     if (!housingItem) {
         return (
-            <div>
-                 {/* Changer ce morceau de code quand la page erreur sera créée */}
-                <p>Hébergement non trouvé</p>
-            </div>
+            <Navigate to='/erreur' replace />
         )
     }
     return (
