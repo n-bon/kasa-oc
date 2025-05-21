@@ -1,8 +1,12 @@
 function Header () {
     return (
-        <div>
+        <header>
             <p>Ceci est mon header</p>
-        </div>
+            <img 
+            src='src/assets/images/kasa-logo-color.png' 
+            alt="logo de Kasa, platerforme de réservation d'hébergements" 
+            />
+        </header>
     )
 }
 

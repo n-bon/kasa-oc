@@ -1,8 +1,10 @@
+
 function Footer() {
     return (
-        <div>
+        <footer>
             <p>Ceci est mon footer</p>
-        </div>
+            <img src='src/assets/images/kasa-logo-white.png'  alt="logo de Kasa, réservation d'hébergements"/>
+        </footer>
     )
 }
 
