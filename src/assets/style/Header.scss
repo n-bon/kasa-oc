@@ -1,0 +1,40 @@
+@use 'vars.scss' as *;
+
+.navbar {
+    padding: $large $xtra-large;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (max-width: 768px) {
+        padding: $small;
+    }
+    &__logo {
+        width: 210px;
+        height: 68px;
+        @media screen and (max-width: 768px) {
+            width: 145px;
+            height: 47px;
+        }
+    }
+    &__menu {
+        display: flex;
+        flex-direction: row;
+        gap: $large;
+        @media screen and (max-width: 768px) {
+            gap: $small;
+        }
+    }
+    &__link {
+        color: $darkest;
+        text-decoration: none;
+        font-size: $medium-text;
+        @media screen and (max-width: 768px) {
+            text-transform: uppercase;
+            font-size: $xtra-small-text;
+        }
+        &--active {
+            text-decoration: underline;
+        }
+    }
+}
