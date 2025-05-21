@@ -9,7 +9,8 @@ import Footer from './assets/components/Footer'
 
 //Import pages here
 import Home from './pages/Home/'
-import About from './pages/About'
+import About from './pages/About/'
+import Housing from './pages/Housing/'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -18,6 +19,7 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/a-propos' element={<About />} />
+        <Route path='/hebergement/:id' element={<Housing />} />
       </Routes>
       <Footer />
     </Router>
