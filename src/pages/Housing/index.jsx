@@ -1,5 +1,5 @@
 import { useParams, Navigate } from 'react-router-dom'
-import housings from '../../assets/data/housings.json'
+import housings from '../../../public/data/housings.json'
 
 function Housing() {
     const { id } = useParams()
