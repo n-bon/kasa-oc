@@ -1,0 +1,44 @@
+@use 'vars.scss' as *;
+
+.thumb {
+    width: 33%;
+    height: 340px;
+    background-color: $contrast1;
+    @include small-radius;
+    margin: $medium;
+    position: relative;
+
+    &__background {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        @include small-radius;
+        z-index: 1;
+    }
+
+    &__layout {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        @include small-radius;
+        background: linear-gradient(
+            to bottom,
+            #FFFFFF00 0%,
+            #0A0A0A00 0%,
+            #04040469 59%,
+            #000000 100%
+        );
+        z-index: 2;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+    &__title {
+        margin: $small;
+        max-width: 40%;
+        color: $brightest;
+        font-size: $medium-small-text;
+        font-weight: 700;
+        line-height: $medium-text;
+    }
+}
