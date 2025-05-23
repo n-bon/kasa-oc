@@ -1,6 +1,8 @@
 import Thumb from "../Thumb";
 import data from '../../../../public/data/housings.json'
 
+import '../../style/ThumbsGrid.scss'
+
 function ThumbsGrid () {
     return (
         <section className="grid">

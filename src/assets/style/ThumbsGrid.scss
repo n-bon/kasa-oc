@@ -1,0 +1,19 @@
+@use 'vars.scss' as *;
+
+.grid {
+    width: 100%;
+    margin: $large 0px;
+    padding: $large;
+    background-color: $support1;
+    @include large-radius;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $large;
+    @media screen and (max-width: 768px) {
+        margin: $small 0px;
+        padding: 0px;
+        background-color: transparent;
+        grid-template-columns: repeat(1, 1fr);
+        gap: $small;
+    }
+}
