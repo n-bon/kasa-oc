@@ -8,7 +8,7 @@ function Banner({ title, image}) {
             className='banner__image'
              />
              <div className='banner__layout'>
-                <h1 class="banner__title">{title}</h1>
+                <h1 className="banner__title">{title}</h1>
              </div>
         </section>
     )
