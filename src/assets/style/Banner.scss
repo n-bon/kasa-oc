@@ -15,7 +15,7 @@
         height: 100%;
         object-fit: cover;
         @include large-radius;
-        position: relative;
+        position: absolute;
         z-index: 1;
         @media screen and (max-width: 768px) {
             @include small-radius;
