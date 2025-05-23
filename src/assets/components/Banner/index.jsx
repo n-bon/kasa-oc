@@ -6,6 +6,7 @@ function Banner({ title, image}) {
             <img
             src={image}
             className='banner__image'
+            alt='Bannière'
              />
              <div className='banner__layout'>
                 <h1 className="banner__title">{title}</h1>

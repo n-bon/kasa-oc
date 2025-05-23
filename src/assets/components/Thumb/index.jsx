@@ -1,21 +1,20 @@
 import '../../style/Thumb.scss'
+import { Link } from 'react-router-dom';
 
-function Thumb() {
+function Thumb({ id, title, cover }) {
     return (
-        <article 
-        className='thumb' 
-        key=''
-        >
-            <img 
-            className='thumb__background'
-            src='https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg'
-            />
-            <div className='thumb__layout'>
-                <h2 className='thumb__title'>
-                    Ceci est le titre de ma carte
-                </h2>
-            </div>
-        </article>
+        <Link to={`hebergement/${id}`}>
+            <article className='thumb'>
+                <img 
+                className='thumb__background'
+                src={cover}
+                alt={`Aperçu de ${title}`}
+                />
+                <div className='thumb__layout'>
+                    <h2 className='thumb__title'>{title}</h2>
+                </div>
+            </article>        
+        </Link>
     )
 }
 
