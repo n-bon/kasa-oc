@@ -1,0 +1,51 @@
+@use 'vars.scss' as *;
+
+.banner {
+    width: 100%;
+    height: 223px;
+    position: relative;
+    @include large-radius;
+    @include drop-shadow1;
+    @media screen and (max-width: 768px) {
+        height: 111px;
+        @include small-radius;
+    }
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        @include large-radius;
+        position: relative;
+        z-index: 1;
+        @media screen and (max-width: 768px) {
+            @include small-radius;
+        }
+    }
+    &__layout {
+        background-color: rgba(0,0,0,0.6);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0px $small;
+        object-fit: cover;
+        z-index: 2;
+        @include large-radius;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-width: 768px) {
+            @include small-radius;
+            justify-content: flex-start;
+        }
+    }
+    &__title {
+        font-size: $xtra-big-text;
+        color: $brightest;
+        @include text-stroke1;
+        @media screen and (max-width: 768px) {
+            font-size: $medium-text;
+        }
+    }
+}
