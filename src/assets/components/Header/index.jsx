@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import '../../style/Header.scss'
+import logoColor from '../../../../public/logo/kasa-logo-color.png'
 
 function Header () {
     const location = useLocation()
@@ -7,7 +8,7 @@ function Header () {
         <header className='navbar'>
             <img 
             className='navbar__logo'
-            src='src/assets/images/kasa-logo-color.png' 
+            src= {logoColor}
             alt="logo de Kasa, platerforme de réservation d'hébergements" 
             />
             <nav className='navbar__menu'>

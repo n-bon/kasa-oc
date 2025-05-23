@@ -1,6 +1,15 @@
+@use 'vars.scss' as *;
 //------init default fonts
 * {
     font-family: "Montserrat", sans-serif;
+	box-sizing: border-box;
+}
+
+main {
+	padding: 0px $xtra-large;
+	@media screen and (max-width: 768px) {
+        padding: $small;
+    }
 }
 
 //------reset

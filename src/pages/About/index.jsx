@@ -1,8 +1,11 @@
+import Banner from "../../assets/components/Banner"
+import backgroundImage from '../../../public/images/mountains.jpg'
+
 function About () {
     return (
-        <div>
-            <h1>À propos</h1>
-        </div>
+        <main>
+            <Banner title='' image={backgroundImage}/>
+        </main>
     )
 }
 
