@@ -7,7 +7,10 @@ function About () {
         <main>
             <Banner title='' image={backgroundImage}/>
             <section>
-                <Collapse />
+                <Collapse
+                title='Exemple de titre'
+                content= 'Exemple de contenu'
+                />
             </section>
         </main>
     )
