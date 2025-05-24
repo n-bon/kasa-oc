@@ -1,0 +1,28 @@
+@use 'vars.scss' as *;
+
+.collapse {
+    width: 100%;
+    background-color: $light-background;
+    @include small-radius;
+    &__head {
+        width: 100%;
+        padding: $xtra-small;
+        background-color: $contrast1;
+        @include small-radius;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        color: $brightest;
+    }
+    &__title {
+        font-size: $medium-text;
+    }
+    &__icon {
+        font-size: $big-text;
+    }
+    &__content {
+        padding: $small;
+        font-size: $medium-small-text;
+    }
+}

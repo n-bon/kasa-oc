@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import '../../style/Collapse.scss'
 
 function Collapse ({ title, content }) {
     const [isOpen, setIsOpen] = useState(false)
@@ -8,7 +9,7 @@ function Collapse ({ title, content }) {
         <div className='collapse'>
             <div className='collapse__head' onClick={toggleCollapse}>
                 <h2 className='collapse__title'>{title}</h2>
-                <i className={`collapse__head fa-solid fa-chevron-right ${isOpen ? 'open' : ''}`}></i>
+                <i className={`collapse__icon fa-solid fa-chevron-up ${isOpen ? 'collapse__icon--open' : ''}`}></i>
             </div>
             {isOpen && <div className='collapse__content'>{content}</div>}
         </div>
