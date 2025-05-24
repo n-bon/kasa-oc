@@ -1,1 +1,14 @@
 @use 'vars.scss' as *;
+
+.about {
+    @include security-height;
+    &__collapseGrid {
+        padding: $large $xtra-large;
+        display: flex;
+        flex-direction: column;
+        gap: $medium;
+        @media screen and (max-width: 768px) {
+            padding: $small 0px;
+        }   
+    }
+}
