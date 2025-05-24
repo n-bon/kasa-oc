@@ -4,6 +4,7 @@
     width: 100%;
     background-color: $light-background;
     @include small-radius;
+    container: collapse / inline-size; //declaration raccourcie du contexte de containnement
     &__head {
         width: 100%;
         padding: $xtra-small;
@@ -17,17 +18,32 @@
     }
     &__title {
         font-size: $medium-text;
+        @container collapse (max-width: 700px) {
+            font-size: $medium-small-text;
+        }
+        @container collapse (max-width: 400px) {
+            font-size: $xtra-small-text;
+        }
     }
     &__icon {
         font-size: $big-text;
         transition: transform 0.8s ease;
         transform: rotate(0deg); //position par défaut du chevron
+        @container collapse (max-width: 700px) {
+            font-size: $medium-text;
+        }
+        @container collapse (max-width: 400px) {
+            font-size: $small-text;
+        }
         &--open {
             transform: rotate(180deg); //chevron vers le bas à l'ouverture
         }
     }
     &__content {
         font-size: $medium-small-text;
+        @container collapse (max-width: 400px) {
+            font-size: $xtra-small-text;
+        }
         //était initial caché, nécessaire pour la transition
         padding-left: $small;
         max-height: 0;
