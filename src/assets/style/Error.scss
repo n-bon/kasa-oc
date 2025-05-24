@@ -4,20 +4,34 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    @include security-height;
     &__title {
         padding: $xxtra-large 0px;
         font-size: calc(6 * $xtra-big-text);
         color: $contrast1;
+        @media screen and (max-width: 768px) {
+            padding: $xtra-large 0px;
+            font-size: calc(2 * $xtra-big-text);
+        }
     }
     &__text {
         font-size: $big-text;
         font-weight: 500;
         color: $contrast1;
+        @media screen and (max-width: 768px) {
+            font-size: $medium-small-text;
+            line-height: $medium-text;
+            margin: 0px $large;
+        }
     }
     &__link {
-        margin: $xxtra-large;
+        margin: $xxtra-large 0px;
         color: $darkest;
         font-size: $medium-small-text;
         font-weight: 500;
+         @media screen and (max-width: 768px) {
+            margin: $xtra-large 0px;
+        }
     }
 }
