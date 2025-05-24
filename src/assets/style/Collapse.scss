@@ -41,8 +41,10 @@
     }
     &__content {
         font-size: $medium-small-text;
+        line-height: $medium-text;
         @container collapse (max-width: 400px) {
             font-size: $xtra-small-text;
+            line-height: $small-text;
         }
         //était initial caché, nécessaire pour la transition
         padding-left: $small;
