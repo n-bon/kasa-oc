@@ -1,1 +1,23 @@
 @use 'vars.scss' as *;
+
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title {
+        padding: $xxtra-large 0px;
+        font-size: calc(6 * $xtra-big-text);
+        color: $contrast1;
+    }
+    &__text {
+        font-size: $big-text;
+        font-weight: 500;
+        color: $contrast1;
+    }
+    &__link {
+        margin: $xxtra-large;
+        color: $darkest;
+        font-size: $medium-small-text;
+        font-weight: 500;
+    }
+}
