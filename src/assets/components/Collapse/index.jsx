@@ -11,7 +11,9 @@ function Collapse ({ title, content }) {
                 <h2 className='collapse__title'>{title}</h2>
                 <i className={`collapse__icon fa-solid fa-chevron-up ${isOpen ? 'collapse__icon--open' : ''}`}></i>
             </div>
-            {isOpen && <div className='collapse__content'>{content}</div>}
+            <div className={`collapse__content ${isOpen ? 'collapse__content--open' : ''}`}>
+                {content}
+            </div>
         </div>
     )
 }

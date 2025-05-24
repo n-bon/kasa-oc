@@ -20,9 +20,21 @@
     }
     &__icon {
         font-size: $big-text;
+        transition: transform 0.5s ease;
+        transform: rotate(0deg); //position par défaut du chevron
+        &--open {
+            transform: rotate(180deg); //chevron vers le bas à l'ouverture
+        }
     }
     &__content {
-        padding: $small;
         font-size: $medium-small-text;
+        //était initial caché, nécessaire pour la transition
+        padding-left: $small;
+        max-height: 0;
+        transition: max-height 0.5s ease;
+        &--open {
+            padding: $small;
+            max-height: 500px;
+        }
     }
 }
