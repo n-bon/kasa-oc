@@ -13,6 +13,14 @@ $large: 50px;
 $medium: 30px;
 $small: 20px;
 $xtra-small: 10px;
+
+@mixin security-height {
+    min-height : calc(100vh - 370px);
+    @media screen and (max-width: 768px) {
+        min-height: calc(100vh - 290px);
+    }
+}
+
 //font-sizes
 $xtra-big-text: 48px;
 $big-text: 36px;
