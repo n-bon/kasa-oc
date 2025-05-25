@@ -47,3 +47,14 @@ $smallest-text: 10px;
 @mixin small-radius {
     border-radius: 10px;
 }
+
+//slider chevrons 
+@mixin responsive-slider-chevrons {
+    padding: $small;
+    cursor: pointer;
+    font-size: calc(2 * $xtra-big-text);
+    @media screen and (max-width: 768px) {
+        font-size: $medium-text;
+        padding: $xtra-small;
+    }
+}
