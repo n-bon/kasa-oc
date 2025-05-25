@@ -1,18 +1,10 @@
 @use 'vars.scss' as *;
 
 .tag {
-    width: $xxtra-large;
-    height: $medium;
+    padding: calc($xtra-small / 2) $medium;
     background-color: $contrast1;
     @include small-radius;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-
-    &__text {
-        color: $brightest;
-        font-size: $small-text;
-        font-weight: 700;        
-    }
+    color: $brightest;
+    font-size: $small-text;
+    font-weight: 700;     
 }

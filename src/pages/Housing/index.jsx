@@ -7,7 +7,7 @@ import housings from '../../../public/data/housings.json'
 //import components here
 import Slideshow from '../../assets/components/Slideshow'
 import Collapse from '../../assets/components/Collapse'
-import Tag from '../../assets/components/Tag'
+import TagsList from '../../assets/components/TagsList'
 
 function Housing() {
     const { id } = useParams()
@@ -30,10 +30,7 @@ function Housing() {
                     <h1 className='housing__title'>{housingItem.title}</h1>
                     <p className='housing__location'>{housingItem.location}</p>
                     {/* Insérer les tags ici*/}
-                    <Tag  
-                    key='tag-1'
-                    tagContent={housingItem.tags[0]}
-                    />
+                    <TagsList list={housingItem.tags} />
                 </div>
                 <div>
                     {/* Insérer le profile sumup ici*/}
