@@ -8,6 +8,7 @@ import housings from '../../../public/data/housings.json'
 import Slideshow from '../../assets/components/Slideshow'
 import Collapse from '../../assets/components/Collapse'
 import TagsList from '../../assets/components/TagsList'
+import Review from '../../assets/components/Review'
 
 function Housing() {
     const { id } = useParams()
@@ -35,6 +36,9 @@ function Housing() {
                 <div>
                     {/* Insérer le profile sumup ici*/}
                     {/* Insérer la note ici, gérer les propriétés avec flex */}
+                    <Review 
+                    rating={housingItem.rating}
+                    />
                 </div>
             </section>
             <section className='details'>

@@ -1,0 +1,17 @@
+@use 'vars.scss' as *;
+
+.review {
+    display: flex;
+    flex-direction: row;
+    gap: $xtra-small;
+    &__star {
+        color: $support1;
+        font-size: $big-text;
+        @media screen and (max-width: 768px) {
+            font-size: $medium-small-text;
+        }
+        &--active {
+            color: $contrast1;
+        }
+    }
+}
