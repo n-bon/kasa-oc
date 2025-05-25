@@ -18,4 +18,39 @@
             @include small-radius;
         }
     }
+    &__layout {
+        z-index: 2;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    &__chevron {
+        color: $brightest;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        &--left {
+            @include responsive-slider-chevrons
+        }
+        &--right {
+            @include responsive-slider-chevrons
+        }
+    }
+    &__count {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: $medium 0px;
+        text-align: center;
+        color: $brightest;
+        font-weight: 500;
+        font-size: $medium-small-text;
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+    }
 }
