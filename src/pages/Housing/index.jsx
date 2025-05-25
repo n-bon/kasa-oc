@@ -13,7 +13,7 @@ function Housing() {
         )
     }
     return (
-        <div>
+        <main>
             <Slideshow
             pictures={housingItem.pictures}
             title={housingItem.title}
@@ -21,7 +21,7 @@ function Housing() {
             <h1>{housingItem.title}</h1>
             <p>{housingItem.id}</p>
             <p>{housingItem.description}</p>
-        </div>
+        </main>
     )
 }
 
