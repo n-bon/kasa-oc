@@ -1,13 +1,18 @@
+//import hooks here
 import { useParams, Navigate } from 'react-router-dom'
+
+//import data here
 import housings from '../../../public/data/housings.json'
 
+//import components here
 import Slideshow from '../../assets/components/Slideshow'
 import Collapse from '../../assets/components/Collapse'
+import Tag from '../../assets/components/Tag'
 
 function Housing() {
     const { id } = useParams()
     const housingItem = housings.find((item) => item.id === id)
-
+    console.log(housingItem)
     if (!housingItem) {
         return (
             <Navigate to='/erreur' replace />
@@ -25,6 +30,10 @@ function Housing() {
                     <h1 className='housing__title'>{housingItem.title}</h1>
                     <p className='housing__location'>{housingItem.location}</p>
                     {/* Insérer les tags ici*/}
+                    <Tag  
+                    key='tag-1'
+                    tagContent={housingItem.tags[0]}
+                    />
                 </div>
                 <div>
                     {/* Insérer le profile sumup ici*/}
@@ -42,7 +51,6 @@ function Housing() {
                 title='Équipements'
                 content={housingItem.equipments}
                 />
-
             </section>
         </main>
     )
