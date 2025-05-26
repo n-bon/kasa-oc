@@ -21,7 +21,7 @@
         @container collapse (max-width: 700px) {
             font-size: $medium-small-text;
         }
-        @container collapse (max-width: 400px) {
+        @container collapse (max-width: 500px) {
             font-size: $xtra-small-text;
         }
     }
@@ -32,7 +32,7 @@
         @container collapse (max-width: 700px) {
             font-size: $medium-text;
         }
-        @container collapse (max-width: 400px) {
+        @container collapse (max-width: 500px) {
             font-size: $small-text;
         }
         &--open {
@@ -42,7 +42,7 @@
     &__content {
         font-size: $medium-small-text;
         line-height: $medium-text;
-        @container collapse (max-width: 400px) {
+        @container collapse (max-width: 500px) {
             font-size: $xtra-small-text;
             line-height: $small-text;
         }

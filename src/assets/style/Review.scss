@@ -8,7 +8,7 @@
         color: $support1;
         font-size: $medium-text;
         @media screen and (max-width: 768px) {
-            font-size: $medium-small-text;
+            font-size: $small-text;
         }
         &--active {
             color: $contrast1;

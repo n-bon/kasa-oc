@@ -6,5 +6,8 @@
     @include small-radius;
     color: $brightest;
     font-size: $small-text;
-    font-weight: 700;     
+    font-weight: 700;
+    @media screen and (max-width: 768px) {
+        font-size: $smallest-text;
+    }     
 }
