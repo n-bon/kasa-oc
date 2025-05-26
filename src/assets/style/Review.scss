@@ -6,7 +6,7 @@
     gap: $xtra-small;
     &__star {
         color: $support1;
-        font-size: $big-text;
+        font-size: $medium-text;
         @media screen and (max-width: 768px) {
             font-size: $medium-small-text;
         }

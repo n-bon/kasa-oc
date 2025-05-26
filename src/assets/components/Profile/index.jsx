@@ -1,9 +1,10 @@
+import '../../style/Profile.scss'
+
 function Profile( { host }) {
     return(
-        <div>
-            <p>Ceci est mon composant profil</p>
-            <p>{host.name}</p>
-            <img src={host.picture} alt={`Portrait de ${host.name}`} />           
+        <div className='profile'>
+            <p className='profile__name'>{host.name}</p>
+            <img className='profile__image' src={host.picture} alt={`Portrait de ${host.name}`} />           
         </div>
     )
 }
