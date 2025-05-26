@@ -9,6 +9,7 @@ import Slideshow from '../../assets/components/Slideshow'
 import Collapse from '../../assets/components/Collapse'
 import TagsList from '../../assets/components/TagsList'
 import Review from '../../assets/components/Review'
+import Profile from '../../assets/components/Profile'
 
 function Housing() {
     const { id } = useParams()
@@ -35,6 +36,9 @@ function Housing() {
                 </div>
                 <div>
                     {/* Insérer le profile sumup ici*/}
+                    <Profile
+                    host={housingItem.host}
+                    />
                     {/* Insérer la note ici, gérer les propriétés avec flex */}
                     <Review 
                     rating={housingItem.rating}
