@@ -1,0 +1,13 @@
+@use 'vars.scss' as *;
+
+.tag {
+    padding: calc($xtra-small / 2) $medium;
+    background-color: $contrast1;
+    @include small-radius;
+    color: $brightest;
+    font-size: $small-text;
+    font-weight: 700;
+    @media screen and (max-width: 768px) {
+        font-size: $smallest-text;
+    }     
+}
