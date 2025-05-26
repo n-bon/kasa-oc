@@ -11,6 +11,9 @@ import TagsList from '../../assets/components/TagsList'
 import Review from '../../assets/components/Review'
 import Profile from '../../assets/components/Profile'
 
+//import styles here
+import '../../assets/style/Housing.scss'
+
 function Housing() {
     const { id } = useParams()
     const housingItem = housings.find((item) => item.id === id)
@@ -31,31 +34,32 @@ function Housing() {
                 <div className='housing__head'>
                     <h1 className='housing__title'>{housingItem.title}</h1>
                     <p className='housing__location'>{housingItem.location}</p>
-                    {/* Insérer les tags ici*/}
                     <TagsList list={housingItem.tags} />
                 </div>
-                <div>
-                    {/* Insérer le profile sumup ici*/}
+                <div className='housing__host'>
                     <Profile
                     host={housingItem.host}
                     />
-                    {/* Insérer la note ici, gérer les propriétés avec flex */}
                     <Review 
                     rating={housingItem.rating}
                     />
                 </div>
             </section>
             <section className='details'>
-                <Collapse
-                key='collapse-1'
-                title='Description'
-                content={housingItem.description}
-                />
+                <div className='details__container'>
+                    <Collapse
+                    key='collapse-1'
+                    title='Description'
+                    content={housingItem.description}
+                    />                    
+                </div>
+                <div className='details__container'>
                 <Collapse 
                 key='collapse-2'
                 title='Équipements'
                 content={housingItem.equipments}
-                />
+                />                    
+                </div>
             </section>
         </main>
     )
