@@ -8,7 +8,7 @@
 main {
 	padding: 0px $xtra-large;
 	@media screen and (max-width: 768px) {
-        padding: $small;
+        padding: 0px $small $small $small;
     }
 }
 
