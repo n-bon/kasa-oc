@@ -32,6 +32,7 @@
         font-weight: 500;
          @media screen and (max-width: 768px) {
             margin: $xtra-large 0px;
+            font-size: $small-text;
         }
     }
 }

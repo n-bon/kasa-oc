@@ -9,6 +9,7 @@
         gap: $medium;
         @media screen and (max-width: 768px) {
             padding: $small 0px;
+            gap: $small;
         }   
     }
 }
