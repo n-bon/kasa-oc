@@ -34,7 +34,7 @@
         align-items: flex-end;
         @media screen and (max-width: 768px) {
             width: 100%;
-            margin: $xtra-small 0px;
+            margin: calc($xtra-small / 2) 0px $xtra-small 0px;
             flex-direction: row-reverse;
             justify-content: space-between;
             align-items: center;
