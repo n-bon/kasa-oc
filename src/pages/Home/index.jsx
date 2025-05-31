@@ -4,7 +4,7 @@ import Thumb from '../../assets/components/Thumb'
 
 //import assets
 import data from '/src/assets/data/housings.json'
-import backgroundImage from '../../../public/images/ocean.jpg'
+import backgroundImage from '/src/assets/images/ocean.jpg'
 
 //import style
 import './style.scss'

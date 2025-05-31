@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import './style.scss'
-import logoColor from '../../../../public/logo/kasa-logo-color.png'
+import logoColor from '/src/assets/logo/kasa-logo-color.png'
 
 function Header () {
     const location = useLocation()
