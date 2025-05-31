@@ -9,7 +9,6 @@ import Slideshow from '../../assets/components/Slideshow'
 import Collapse from '../../assets/components/Collapse'
 import Tag from '../../assets/components/Tag'
 import Review from '../../assets/components/Review'
-import Profile from '../../assets/components/Profile'
 
 //import styles here
 import './style.scss'
@@ -43,9 +42,10 @@ function Housing() {
                     </div>
                 </div>
                 <div className='housing__host'>
-                    <Profile
-                    host={housingItem.host}
-                    />
+                    <div className='profile'>
+                        <p className='profile__name'>{housingItem.host.name}</p>
+                        <img className='profile__image' src={housingItem.host.picture} alt={`Portrait de ${housingItem.host.name}`} />           
+                    </div>
                     <Review 
                     rating={housingItem.rating}
                     />
