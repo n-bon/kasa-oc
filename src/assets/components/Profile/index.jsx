@@ -1,4 +1,4 @@
-import '../../style/Profile.scss'
+import './style.scss'
 
 function Profile( { host }) {
     return(

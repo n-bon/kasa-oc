@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-import '../../style/Header.scss'
+import './style.scss'
 import logoColor from '../../../../public/logo/kasa-logo-color.png'
 
 function Header () {

@@ -1,7 +1,7 @@
 import Thumb from "../Thumb";
 import data from '../../../../public/data/housings.json'
 
-import '../../style/ThumbsGrid.scss'
+import './style.scss'
 
 function ThumbsGrid () {
     return (

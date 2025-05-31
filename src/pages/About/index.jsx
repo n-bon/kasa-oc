@@ -6,7 +6,7 @@ import Collapse from '../../assets/components/Collapse'
 import backgroundImage from '../../../public/images/mountains.jpg'
 
 //import style
-import '../../assets/style/About.scss'
+import './style.scss'
 
 function About () {
     const aboutContent = [

@@ -1,5 +1,5 @@
 import Tag from '../Tag'
-import '../../style/TagsList.scss'
+import './style.scss'
 
 function TagsList({ list }) {
     return (

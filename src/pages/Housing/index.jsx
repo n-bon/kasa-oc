@@ -12,12 +12,11 @@ import Review from '../../assets/components/Review'
 import Profile from '../../assets/components/Profile'
 
 //import styles here
-import '../../assets/style/Housing.scss'
+import './style.scss'
 
 function Housing() {
     const { id } = useParams()
     const housingItem = housings.find((item) => item.id === id)
-    console.log(housingItem)
     if (!housingItem) {
         return (
             <Navigate to='/erreur' replace />

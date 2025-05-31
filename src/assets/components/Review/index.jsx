@@ -1,4 +1,4 @@
-import '../../style/Review.scss'
+import './style.scss'
 function Review({ rating }) {
 const totalStars = 5
 

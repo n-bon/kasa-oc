@@ -1,4 +1,4 @@
-import '../../style/Tag.scss'
+import './style.scss'
 
 function Tag({ tagContent }) {
     return (

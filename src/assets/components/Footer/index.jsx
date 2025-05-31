@@ -1,4 +1,4 @@
-import '../../style/Footer.scss'
+import './style.scss'
 
 import logoWhite from '../../../../public/logo/kasa-logo-white.png'
 

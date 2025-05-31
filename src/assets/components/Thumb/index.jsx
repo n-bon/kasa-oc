@@ -1,4 +1,4 @@
-import '../../style/Thumb.scss'
+import './style.scss'
 import { Link } from 'react-router-dom'
 
 function Thumb({ id, title, cover }) {
