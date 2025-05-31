@@ -61,9 +61,13 @@ main {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+    margin-bottom: $small;
+    @media screen and (max-width: 768px) {
+        margin: 0px;
+    }    
     &__name {
         max-width: $xtra-large;
-        margin: $small;
+        margin: 0px $small;
         font-size: $medium-small-text;
         line-height: $medium-text;
         color: $contrast1;
@@ -72,7 +76,6 @@ main {
             max-width: $large;
             font-size: $xtra-small-text;
             line-height: $small-text;
-            margin: 0px $small;
         }
     }
     &__image {
