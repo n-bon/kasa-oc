@@ -29,32 +29,32 @@
         font-size: $big-text;
         transition: transform 0.4s ease;
         transform: rotate(0deg); //position par défaut du chevron
+        &--open {
+            transform: rotate(180deg); //chevron vers le bas à l'ouverture
+        }        
         @container collapse (max-width: 700px) {
             font-size: $medium-text;
         }
         @container collapse (max-width: 500px) {
             font-size: $small-text;
         }
-        &--open {
-            transform: rotate(180deg); //chevron vers le bas à l'ouverture
-        }
     }
     &__content {
         font-size: $medium-small-text;
         line-height: $medium-text;
-        @container collapse (max-width: 500px) {
-            font-size: $xtra-small-text;
-            line-height: $small-text;
-        }
         //était initial caché, nécessaire pour la transition
         padding-left: $small;
         max-height: 0;
         opacity: 0;
-        transition: max-height 0.2s ease, opacity 0.2s ease;
+        transition: max-height 0.2s ease, opacity 0.2s ease;  
         &--open {
             padding: $small;
             max-height: 500px;
             opacity: 1;
+        }              
+        @container collapse (max-width: 500px) {
+            font-size: $xtra-small-text;
+            line-height: $small-text;
         }
     }
 }
