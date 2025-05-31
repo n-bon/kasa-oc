@@ -3,7 +3,7 @@ import Banner from '../../assets/components/Banner'
 import Thumb from '../../assets/components/Thumb'
 
 //import assets
-import data from '../../../public/data/housings.json'
+import data from '/src/assets/data/housings.json'
 import backgroundImage from '../../../public/images/ocean.jpg'
 
 //import style

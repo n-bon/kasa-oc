@@ -2,7 +2,7 @@
 import { useParams, Navigate } from 'react-router-dom'
 
 //import data here
-import housings from '../../../public/data/housings.json'
+import data from '/src/assets/data/housings.json'
 
 //import components here
 import Slideshow from '../../assets/components/Slideshow'
@@ -15,7 +15,7 @@ import './style.scss'
 
 function Housing() {
     const { id } = useParams()
-    const housingItem = housings.find((item) => item.id === id)
+    const housingItem = data.find((item) => item.id === id)
     if (!housingItem) {
         return (
             <Navigate to='/erreur' replace />
