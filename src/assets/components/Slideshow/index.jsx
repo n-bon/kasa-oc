@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import '../../style/Slideshow.scss'
+import './style.scss'
 
 function Slideshow({ pictures, title }) {
 

@@ -3,10 +3,10 @@ import Banner from '../../assets/components/Banner'
 import Collapse from '../../assets/components/Collapse'
 
 //import banner image
-import backgroundImage from '../../../public/images/mountains.jpg'
+import backgroundImage from '/src/assets/images/mountains.jpg'
 
 //import style
-import '../../assets/style/About.scss'
+import './style.scss'
 
 function About () {
     const aboutContent = [

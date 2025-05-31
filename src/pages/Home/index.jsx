@@ -1,13 +1,29 @@
+//import components
 import Banner from '../../assets/components/Banner'
-import backgroundImage from '../../../public/images/ocean.jpg'
-import ThumbsGrid from '../../assets/components/ThumbsGrid'
+import Thumb from '../../assets/components/Thumb'
+
+//import assets
+import data from '/src/assets/data/housings.json'
+import backgroundImage from '/src/assets/images/ocean.jpg'
+
+//import style
+import './style.scss'
 
 function Home() {
 
   return (
     <main>
       <Banner title='Chez vous, partout et ailleurs' image={backgroundImage}/>
-      <ThumbsGrid />
+      <section className="grid">
+        {data.map((housing) => (
+            <Thumb 
+                key={housing.id}
+                id={housing.id}
+                title={housing.title}
+                cover={housing.cover}
+            />
+        ))}
+      </section>
     </main>
   )
 }

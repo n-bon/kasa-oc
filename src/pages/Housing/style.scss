@@ -1,4 +1,4 @@
-@use 'vars.scss' as *;
+@use '../../assets/style/vars.scss' as *;
 
 main {
     @include security-height;
@@ -43,6 +43,49 @@ main {
             justify-content: space-between;
             align-items: center;
         }    
+    }
+    &__tagsList {
+        margin: $small 0px;
+        display: flex;
+        align-items: center;
+        gap: $xtra-small;
+        flex-wrap: wrap;
+        @media screen and (max-width: 768px) {
+            margin: $xtra-small 0px;
+        }
+    }
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: $small;
+    @media screen and (max-width: 768px) {
+        margin: 0px;
+    }    
+    &__name {
+        max-width: $xtra-large;
+        margin: 0px $small;
+        font-size: $medium-small-text;
+        line-height: $medium-text;
+        color: $contrast1;
+        text-align: right;
+        @media screen and (max-width: 768px) {
+            max-width: $large;
+            font-size: $xtra-small-text;
+            line-height: $small-text;
+        }
+    }
+    &__image {
+        width: calc(2 * $medium);
+        height: calc(2 * $medium);
+        border-radius: $medium;
+        @media screen and (max-width: 768px) {
+            width: $medium;
+            height: $medium;
+        }
     }
 }
 

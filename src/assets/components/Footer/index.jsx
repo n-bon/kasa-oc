@@ -1,6 +1,6 @@
-import '../../style/Footer.scss'
+import './style.scss'
 
-import logoWhite from '../../../../public/logo/kasa-logo-white.png'
+import logoWhite from '/src/assets/logo/kasa-logo-white.png'
 
 function Footer() {
     return (

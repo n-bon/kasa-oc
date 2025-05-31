@@ -2,22 +2,20 @@
 import { useParams, Navigate } from 'react-router-dom'
 
 //import data here
-import housings from '../../../public/data/housings.json'
+import data from '/src/assets/data/housings.json'
 
 //import components here
 import Slideshow from '../../assets/components/Slideshow'
 import Collapse from '../../assets/components/Collapse'
-import TagsList from '../../assets/components/TagsList'
+import Tag from '../../assets/components/Tag'
 import Review from '../../assets/components/Review'
-import Profile from '../../assets/components/Profile'
 
 //import styles here
-import '../../assets/style/Housing.scss'
+import './style.scss'
 
 function Housing() {
     const { id } = useParams()
-    const housingItem = housings.find((item) => item.id === id)
-    console.log(housingItem)
+    const housingItem = data.find((item) => item.id === id)
     if (!housingItem) {
         return (
             <Navigate to='/erreur' replace />
@@ -34,12 +32,20 @@ function Housing() {
                 <div className='housing__head'>
                     <h1 className='housing__title'>{housingItem.title}</h1>
                     <p className='housing__location'>{housingItem.location}</p>
-                    <TagsList list={housingItem.tags} />
+                    <div className='housing__tagsList'>
+                        {housingItem.tags.map((item, index) => (
+                            <Tag
+                            key={`tag-${index}`}
+                            tagContent={item}
+                            />
+                        ))}
+                    </div>
                 </div>
                 <div className='housing__host'>
-                    <Profile
-                    host={housingItem.host}
-                    />
+                    <div className='profile'>
+                        <p className='profile__name'>{housingItem.host.name}</p>
+                        <img className='profile__image' src={housingItem.host.picture} alt={`Portrait de ${housingItem.host.name}`} />           
+                    </div>
                     <Review 
                     rating={housingItem.rating}
                     />
@@ -54,11 +60,11 @@ function Housing() {
                     />                    
                 </div>
                 <div className='details__container'>
-                <Collapse 
-                key='collapse-2'
-                title='Équipements'
-                content={housingItem.equipments}
-                />                    
+                    <Collapse 
+                    key='collapse-2'
+                    title='Équipements'
+                    content={housingItem.equipments}
+                    />                    
                 </div>
             </section>
         </main>

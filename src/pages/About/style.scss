@@ -1,4 +1,4 @@
-@use 'vars.scss' as *;
+@use '../../assets/style/vars.scss' as *;
 
 .about {
     @include security-height;
