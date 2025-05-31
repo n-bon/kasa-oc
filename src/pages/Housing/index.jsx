@@ -7,7 +7,7 @@ import housings from '../../../public/data/housings.json'
 //import components here
 import Slideshow from '../../assets/components/Slideshow'
 import Collapse from '../../assets/components/Collapse'
-import TagsList from '../../assets/components/TagsList'
+import Tag from '../../assets/components/Tag'
 import Review from '../../assets/components/Review'
 import Profile from '../../assets/components/Profile'
 
@@ -33,7 +33,14 @@ function Housing() {
                 <div className='housing__head'>
                     <h1 className='housing__title'>{housingItem.title}</h1>
                     <p className='housing__location'>{housingItem.location}</p>
-                    <TagsList list={housingItem.tags} />
+                    <div className='housing__tagsList'>
+                        {housingItem.tags.map((item, index) => (
+                            <Tag
+                            key={`tag-${index}`}
+                            tagContent={item}
+                            />
+                        ))}
+                    </div>
                 </div>
                 <div className='housing__host'>
                     <Profile
@@ -53,11 +60,11 @@ function Housing() {
                     />                    
                 </div>
                 <div className='details__container'>
-                <Collapse 
-                key='collapse-2'
-                title='Équipements'
-                content={housingItem.equipments}
-                />                    
+                    <Collapse 
+                    key='collapse-2'
+                    title='Équipements'
+                    content={housingItem.equipments}
+                    />                    
                 </div>
             </section>
         </main>
